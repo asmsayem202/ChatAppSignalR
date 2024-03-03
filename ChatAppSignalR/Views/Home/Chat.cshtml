@@ -1,0 +1,35 @@
+﻿
+<style>
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+</style>
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js" asp-append-version="true"></script>
+
+<div class="card">
+    <header class="card-header">
+        <h1>Chat</h1>
+    </header>
+    <div class="card-body">
+        <div>
+            <label for="txtInput">Input Text:</label>
+            <input id="txtInput" class="form-control" required />
+        </div>
+        <div>
+            <input type="file" id="userFile" accept="image/*" />
+        </div>
+        <button class="btn btn-outline-success" id="btnSend">Send</button>
+    </div>
+    <div class="card-footer">
+        <ul id="chatLog"></ul>
+    </div>
+</div>
+@section Scripts {
+
+    <script src="~/js/chat.js"></script>
+
+}
